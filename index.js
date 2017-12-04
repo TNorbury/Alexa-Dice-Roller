@@ -43,6 +43,13 @@ var handlers = {
             + " sided dice for a total of" + rollTotal);
         
         this.emit(':responseReady');
+    },
+    
+    "AMAZON.HelpIntent": function () {
+        this.response.speak("To use this skill just ask it to roll a dice. "+
+        "Or if you want to specify how many dice to roll, or how many sides the"+
+        " dice should have, just say so. For example, roll two twenty sided dice, or roll six dice");
+        this.emit(":responseReady");
     }
 };
 
